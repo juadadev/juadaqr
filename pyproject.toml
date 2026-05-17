@@ -6,3 +6,8 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = []
 license = { text = "MIT" }
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.13",
+]
