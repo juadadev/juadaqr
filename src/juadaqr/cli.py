@@ -1,8 +1,14 @@
+from importlib.metadata import PackageNotFoundError, version
 from typing import Optional
 
 import typer
 
 from .core import generate_qr_terminal
+
+try:
+    __version__ = version("juadaqr")
+except PackageNotFoundError:
+    __version__ = "0.1.0-dev"
 
 app = typer.Typer(
     help="QR code generator from the terminal using a URL",
@@ -12,7 +18,7 @@ app = typer.Typer(
 
 def version_callback(value: bool):
     if value:
-        typer.echo("juadaqr v0.1.0")
+        typer.echo(f"juadaqr v{__version__}")
         raise typer.Exit()
 
 
