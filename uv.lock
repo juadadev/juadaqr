@@ -35,7 +35,7 @@ wheels = [
 [[package]]
 name = "juadaqr"
 version = "0.2.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "qrcode", extra = ["pil"] },
     { name = "typer" },

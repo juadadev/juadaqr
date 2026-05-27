@@ -10,6 +10,16 @@ dependencies = [
 ]
 license = { text = "MIT" }
 
+[project.scripts]
+juadaqr = "juadaqr.main:app"
+
+[build-system]
+requires = ["uv_build>=0.11.16,<0.12"]
+build-backend = "uv_build"
+
+[project.optional-dependencies]
+build = ["pyinstaller>=6.0"]
+
 [dependency-groups]
 dev = [
     "ruff>=0.15.13",
